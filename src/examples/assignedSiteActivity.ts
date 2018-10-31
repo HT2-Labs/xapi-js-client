@@ -1,5 +1,5 @@
-import assignedSiteActivity from '../actionCreators/assignedSiteActivity';
 import { course } from '../statementConstants/activityTypes';
+import assignedSiteActivity from '../statementCreators/assignedSiteActivity';
 
 const statement = assignedSiteActivity({
   activityType: course,

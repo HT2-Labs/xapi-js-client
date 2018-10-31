@@ -1,4 +1,4 @@
-import registeredToSite from '../actionCreators/registeredToSite';
+import registeredToSite from '../statementCreators/registeredToSite';
 
 const statement = registeredToSite({
   actionDate: new Date(),

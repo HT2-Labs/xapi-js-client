@@ -1,4 +1,4 @@
-import loggedOutOfSite from '../actionCreators/loggedOutOfSite';
+import loggedOutOfSite from '../statementCreators/loggedOutOfSite';
 
 const statement = loggedOutOfSite({
   actionDate: new Date(),

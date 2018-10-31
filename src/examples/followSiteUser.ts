@@ -1,4 +1,4 @@
-import followSiteUser from '../actionCreators/followSiteUser';
+import followSiteUser from '../statementCreators/followSiteUser';
 
 const statement = followSiteUser({
   actionDate: new Date(),

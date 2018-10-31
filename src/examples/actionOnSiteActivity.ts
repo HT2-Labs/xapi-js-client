@@ -1,6 +1,6 @@
-import actionOnSiteActivity from '../actionCreators/actionOnSiteActivity';
 import { course } from '../statementConstants/activityTypes';
 import { completed } from '../statementConstants/verbs';
+import actionOnSiteActivity from '../statementCreators/actionOnSiteActivity';
 
 const statement = actionOnSiteActivity({
   verb: completed,

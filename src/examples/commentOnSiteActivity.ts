@@ -1,5 +1,5 @@
-import commentOnSiteActivity from '../actionCreators/commentOnSiteActivity';
 import { course } from '../statementConstants/activityTypes';
+import commentOnSiteActivity from '../statementCreators/commentOnSiteActivity';
 
 const statement = commentOnSiteActivity({
   activityType: course,

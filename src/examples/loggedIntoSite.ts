@@ -1,4 +1,4 @@
-import loggedIntoSite from '../actionCreators/loggedIntoSite';
+import loggedIntoSite from '../statementCreators/loggedIntoSite';
 
 const statement = loggedIntoSite({
   actionDate: new Date(),
