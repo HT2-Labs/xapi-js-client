@@ -18,7 +18,7 @@
     "lint": "tslint --project ./tsconfig.json",
     "mocha": "mocha $(find dist -name '*.test.js') --exit",
     "cover": "nyc npm test",
-    "duplication": "jscpd --limit 10",
+    "duplication": "jscpd --limit 15",
     "clean": "rimraf dist"
   },
   "nyc": {
