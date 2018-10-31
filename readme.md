@@ -3,4 +3,4 @@
 
 ### Usage
 1. Install it with `npm i @ht2-labs/xapi-js-client`.
-2. Use it like the [examples](./src/examples) using `@ht2-labs/xapi-js-client` instead of `..` in import paths.
+2. Use it like the [examples](./src/examples) using `@ht2-labs/xapi-js-client/dist` instead of `..` in import paths.
