@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "npm run clean && npm run build && npm run lint && npm run cover && npm run duplication",
+    "test": "npm run clean && npm run build && npm run lint && npm run duplication",
     "release": "ht2-release-public-circleci-lib",
     "build": "tsc",
     "lint": "tslint --project ./tsconfig.json",
