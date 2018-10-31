@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "./node_modules/@ht2-labs/typescript-project/configs/tslint.json"
+  ]
+}

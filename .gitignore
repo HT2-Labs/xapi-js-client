@@ -1,0 +1,9 @@
+.cache
+.DS_STORE
+.nyc_output
+.vscode
+dist
+node_modules
+notes.md
+npm-debug.log
+yarn.lock

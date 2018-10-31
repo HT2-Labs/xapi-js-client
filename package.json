@@ -1,0 +1,46 @@
+{
+  "name": "@ht2-labs/xapi-js-client",
+  "version": "0.0.0-development",
+  "description": "A JavaScript client for the xAPI.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ht2-labs/xapi-js-client"
+  },
+  "author": "ht2-labs",
+  "license": "GPL-3.0",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run clean && npm run build && npm run lint && npm run cover && npm run duplication",
+    "release": "ht2-release-public-circleci-lib",
+    "build": "tsc",
+    "lint": "tslint --project ./tsconfig.json",
+    "mocha": "mocha $(find dist -name '*.test.js') --exit",
+    "cover": "nyc npm test",
+    "duplication": "jscpd --limit 10",
+    "clean": "rimraf dist"
+  },
+  "nyc": {
+    "lines": 100,
+    "check-coverage": true
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@ht2-labs/semantic-release": "1.1.27",
+    "@ht2-labs/typescript-project": "2.0.2",
+    "@types/lodash": "4.14.116",
+    "@types/mocha": "5.2.5",
+    "@types/source-map-support": "0.4.1",
+    "jscpd": "0.6.24",
+    "mocha": "5.2.0",
+    "nyc": "11.9.0",
+    "rimraf": "2.6.2",
+    "source-map-support": "0.5.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
