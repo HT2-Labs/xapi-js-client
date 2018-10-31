@@ -23,11 +23,14 @@
     "check-coverage": true
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "base-64": "^0.1.0",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@ht2-labs/semantic-release": "1.1.27",
     "@ht2-labs/typescript-project": "2.0.2",
+    "@types/base-64": "0.1.2",
     "@types/lodash": "4.14.116",
     "@types/mocha": "5.2.5",
     "@types/source-map-support": "0.4.1",
