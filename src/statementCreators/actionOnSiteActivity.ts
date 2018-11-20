@@ -27,10 +27,12 @@ export default function actionOnSiteActivity(action: SiteActivityAction): Statem
       type: action.activityType,
       url: action.activityUrl,
       name: action.activityName,
+      extensions: action.activityExtensions,
     }),
     context: {
       platform: action.platformName,
       language: 'en',
+      extensions: action.contextExtensions,
       contextActivities: {
         grouping: [createActivity({
           type: site,

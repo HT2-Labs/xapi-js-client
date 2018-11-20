@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Statement } from './types';
 
-interface StatementInsertionOpts {
+export interface StatementInsertionOpts {
   /** An array of statements to be inserted to the LRS. */
   readonly statements: Statement[];
 

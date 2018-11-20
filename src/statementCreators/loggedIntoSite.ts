@@ -27,6 +27,7 @@ export default function loggedIntoSite(action: UserSiteAction): Statement {
     context: {
       platform: action.platformName,
       language: 'en',
+      extensions: action.contextExtensions,
       contextActivities: {
         category: [createActivity({
           type: source,

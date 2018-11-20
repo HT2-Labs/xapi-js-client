@@ -51,6 +51,7 @@ export default function followSiteUser(action: FollowAction): Statement {
     context: {
       platform: action.platformName,
       language: 'en',
+      extensions: action.contextExtensions,
       contextActivities: {
         grouping: [createActivity({
           type: site,

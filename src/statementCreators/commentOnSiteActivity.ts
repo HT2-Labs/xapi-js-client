@@ -31,6 +31,7 @@ export default function commentedOnSiteActivity(action: CommentAction): Statemen
       type: action.activityType,
       url: action.activityUrl,
       name: action.activityName,
+      extensions: action.activityExtensions,
     }),
     result: {
       response: action.commentText,
@@ -38,6 +39,7 @@ export default function commentedOnSiteActivity(action: CommentAction): Statemen
     context: {
       platform: action.platformName,
       language: 'en',
+      extensions: action.contextExtensions,
       contextActivities: {
         other: [createActivity({
           type: comment,

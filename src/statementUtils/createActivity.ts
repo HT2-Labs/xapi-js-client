@@ -1,14 +1,20 @@
-import { Activity } from './types';
+import { Activity, Extensions } from './types';
 
 export interface CreateActivityOpts {
-  /** The xAPI activity type. */
+  /**
+   * The xAPI activity type.
+   * Use the string constants exported from `statementConstants/activityTypes`.
+   */
   readonly type: string;
 
   /** The URL where the activity can be accessed. */
   readonly url: string;
 
-  /** The human readable name for the activity. */
+  /** The human readable name for the activity in English. */
   readonly name?: string;
+
+  /** Additional properties of the activity. */
+  readonly extensions?: Extensions;
 }
 
 /**
@@ -24,6 +30,7 @@ export default function createActivity(options: CreateActivityOpts): Activity {
       name: {
         en: options.name,
       },
+      extensions: options.extensions,
     },
   };
 }

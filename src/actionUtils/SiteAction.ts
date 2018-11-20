@@ -1,3 +1,5 @@
+import { Extensions } from '../statementUtils/types';
+
 export default interface SiteAction {
   /**
    * A JavaScript Date representing the date and time that the action occurred.
@@ -33,4 +35,9 @@ export default interface SiteAction {
    * Makes it easier to identify the platform in the LRS.
    */
   readonly platformName?: string;
+
+  /**
+   * Map of extra relevant data.
+   */
+  readonly contextExtensions?: Extensions;
 }

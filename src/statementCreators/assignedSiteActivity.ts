@@ -28,12 +28,14 @@ export default function assignedSiteActivity(action: AssignedAction): Statement 
       type: action.activityType,
       url: action.activityUrl,
       name: action.activityName,
+      extensions: action.activityExtensions,
     }),
     context: {
       platform: action.platformName,
       language: 'en',
       extensions: {
         dueDate: action.dueDate,
+        ...action.contextExtensions === undefined ? {} : action.contextExtensions,
       },
       contextActivities: {
         grouping: [createActivity({
