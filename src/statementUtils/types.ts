@@ -2,6 +2,18 @@
 
 export type IRI = string;
 export type UUID = string;
+export type InteractionType = (
+  'true-false' |
+  'choice' |
+  'fill-in' |
+  'long-fill-in' |
+  'matching' |
+  'performance' |
+  'sequencing' |
+  'likert' |
+  'numeric' |
+  'other'
+);
 
 export interface Extensions {
   /**
@@ -77,6 +89,12 @@ export interface Activity {
      * https://github.com/adlnet/xAPI-Spec/blob/master/xAPI-Data.md#43-iris
      */
     readonly moreInfo?: IRI;
+
+    /**
+     * The type of interaction
+     * https://github.com/adlnet/xAPI-Spec/blob/master/xAPI-Data.md#interactionacts
+     */
+    readonly interactionType?: InteractionType;
   };
 }
 

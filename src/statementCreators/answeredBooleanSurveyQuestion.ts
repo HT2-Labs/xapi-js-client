@@ -1,3 +1,4 @@
+// tslint:disable:max-file-line-count
 import UserSiteAction from '../actionUtils/UserSiteAction';
 import {
   question,
@@ -6,13 +7,14 @@ import {
   survey,
   surveyResponse,
 } from '../statementConstants/activityTypes';
+import { booleanResponseExtension } from '../statementConstants/extensions';
 import { answered } from '../statementConstants/verbs';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
 import createTimestamp from '../statementUtils/createTimestamp';
 import { Extensions, Statement } from '../statementUtils/types';
 
-export interface AnswerSurveyQuestionAction extends UserSiteAction {
+export interface Action extends UserSiteAction {
   /** Name of the survey. */
   readonly surveyName?: string;
 
@@ -37,17 +39,17 @@ export interface AnswerSurveyQuestionAction extends UserSiteAction {
   /** Additional data about the survey response. */
   readonly surveyResponseExtensions?: Extensions;
 
-  /** The text provided to answer the question. */
-  readonly answerText: string;
+  /** The boolean (Yes/No, True/False, etc) provided to answer the question. */
+  readonly answerValue: boolean;
 
   /** Additional data about the answer. */
   readonly answerExtensions?: Extensions;
 }
 
 /**
- * Creates an xAPI Statement to represent a user's answering a survey question.
+ * Creates an xAPI Statement to represent a user's answering a survey question with a boolean.
  */
-export default function answeredSurveyQuestion(action: AnswerSurveyQuestionAction): Statement {
+export default function answeredBooleanSurveyQuestion(action: Action): Statement {
   return {
     timestamp: createTimestamp(action.actionDate),
     actor: createAgent({
@@ -62,10 +64,14 @@ export default function answeredSurveyQuestion(action: AnswerSurveyQuestionActio
       url: action.questionUrl,
       name: action.questionText,
       extensions: action.questionExtensions,
+      interactionType: 'true-false',
     }),
     result: {
-      response: action.answerText,
-      extensions: action.answerExtensions,
+      response: action.answerValue ? 'True' : 'False',
+      extensions: {
+        [booleanResponseExtension]: action.answerValue,
+        ...(action.answerExtensions === undefined ? {} : action.answerExtensions),
+      },
     },
     context: {
       platform: action.platformName,

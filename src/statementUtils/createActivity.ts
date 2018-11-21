@@ -1,4 +1,4 @@
-import { Activity, Extensions } from './types';
+import { Activity, Extensions, InteractionType } from './types';
 
 export interface CreateActivityOpts {
   /**
@@ -15,6 +15,9 @@ export interface CreateActivityOpts {
 
   /** Additional properties of the activity. */
   readonly extensions?: Extensions;
+
+  /** The type of interaction - usually used for questions. */
+  readonly interactionType?: InteractionType;
 }
 
 /**
