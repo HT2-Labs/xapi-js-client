@@ -34,6 +34,7 @@ export default function createActivity(options: CreateActivityOpts): Activity {
         en: options.name,
       },
       extensions: options.extensions,
+      interactionType: options.interactionType,
     },
   };
 }
