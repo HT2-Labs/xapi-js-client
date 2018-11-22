@@ -9,7 +9,7 @@
   "author": "ht2-labs",
   "license": "GPL-3.0",
   "scripts": {
-    "test": "npm run clean && npm run build && npm run lint && npm run duplication",
+    "test": "npm run clean && npm run build && npm run lint",
     "release": "ht2-release-public-circleci-lib-dist",
     "build": "tsc",
     "lint": "tslint --project ./tsconfig.json",
