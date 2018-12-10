@@ -49,7 +49,7 @@ export interface Action extends UserSiteAction {
 /**
  * Creates an xAPI Statement to represent a user's answering a survey question with a choice.
  */
-export default function answeredChoiceSurveyQuestion(action: Action): Statement {
+export default function answeredSelectionSurveyQuestion(action: Action): Statement {
   return {
     timestamp: createTimestamp(action.actionDate),
     actor: createAgent({
