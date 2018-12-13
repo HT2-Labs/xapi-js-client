@@ -64,7 +64,7 @@ export default function answeredNumericSurveyQuestion(action: Action): Statement
       url: action.questionUrl,
       name: action.questionText,
       extensions: action.questionExtensions,
-      interactionType: 'long-fill-in',
+      interactionType: 'numeric',
     }),
     result: {
       response: action.answer.toString(),
