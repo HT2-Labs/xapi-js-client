@@ -10,6 +10,6 @@ export interface BasicAuthOpts {
  * Returns `Basic <BASE 64 ENCODED KEY:SECRET>`
  */
 export default function createBasicAuthToken(opts: BasicAuthOpts) {
-  const encodedCredentials = encode(`${opts.key}:${opts.secret})`);
+  const encodedCredentials = encode(`${opts.key}:${opts.secret}`);
   return `Basic ${encodedCredentials}`;
 }
