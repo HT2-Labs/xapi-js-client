@@ -30,6 +30,7 @@ export const liked = createVerb('https://w3id.org/xapi/acrossx/verbs/liked', 'li
 export const loggedIn = createVerb('https://w3id.org/xapi/adl/verbs/logged-in', 'logged into');
 export const loggedOut = createVerb('https://w3id.org/xapi/adl/verbs/logged-out', 'logged out of');
 export const opened = createVerb('http://activitystrea.ms/schema/1.0/open', 'opened');
+export const planned = createVerb('https://w3id.org/xapi/dod-isd/verbs/planned', 'planned');
 export const posted = createVerb('https://w3id.org/xapi/acrossx/verbs/posted', 'posted');
 export const registered = createVerb('http://adlnet.gov/expapi/verbs/registered', 'registered to');
 export const replied = createVerb('http://id.tincanapi.com/verb/replied', 'replied');
