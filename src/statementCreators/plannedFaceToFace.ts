@@ -1,22 +1,28 @@
-import UserSiteActivityAction from '../actionUtils/UserSiteActivityAction';
-import { faceToFace, source } from '../statementConstants/activityTypes';
+import { faceToFace, source, site } from '../statementConstants/activityTypes';
 import { planned } from '../statementConstants/verbs';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
-import { Statement } from '../statementUtils/types';
+import createTimestamp from '../statementUtils/createTimestamp';
+import { Statement, Extensions } from '../statementUtils/types';
+import UserSiteAction from '../actionUtils/UserSiteAction';
 
+export interface PlannedFaceToFaceAction extends UserSiteAction {
+  /** The URL where the activity can be accessed. */
+  readonly activityUrl: string;
 
-export interface FaceToFaceAction extends UserSiteActivityAction {
-  /** URL to access the survey. */
-  readonly existingDate: string;
+  /** The human readable name for the activity. */
+  readonly activityName?: string;
+
+  /** Additional properties of the activity. */
+  readonly activityExtensions?: Extensions;
 }
 
 /**
  * Creates an xAPI Statement to represent a user planning a face-to-face meeting.
  */
-export default function plannedFaceToFace(action: FaceToFaceAction): Statement {
+export default function plannedFaceToFace(action: PlannedFaceToFaceAction): Statement {
   return {
-    timestamp: action.existingDate,
+    timestamp: createTimestamp(action.actionDate),
     actor: createAgent({
       displayName: action.userDisplayName,
       id: action.userId,
@@ -27,11 +33,25 @@ export default function plannedFaceToFace(action: FaceToFaceAction): Statement {
     object: createActivity({
       type: faceToFace,
       url: action.activityUrl,
-      name: 'appointment',
+      name: action.activityName,
+      extensions: action.activityExtensions,
     }),
     context: {
       platform: action.platformName,
       language: 'en',
+      extensions: action.contextExtensions,
+      contextActivities: {
+        grouping: [createActivity({
+          type: site,
+          url: action.siteUrl,
+          name: action.siteName,
+        })],
+        category: [createActivity({
+          type: source,
+          url: action.platformUrl,
+          name: action.platformName,
+        })],
+      },
     },
   };
 }
