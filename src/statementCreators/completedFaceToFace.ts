@@ -1,12 +1,12 @@
 import UserSiteAction from '../actionUtils/UserSiteAction';
 import { faceToFace, site, source } from '../statementConstants/activityTypes';
-import { planned } from '../statementConstants/verbs';
+import { completed } from '../statementConstants/verbs';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
 import createTimestamp from '../statementUtils/createTimestamp';
 import { Extensions, Statement } from '../statementUtils/types';
 
-export interface PlannedFaceToFaceAction extends UserSiteAction {
+export interface CompletedFaceToFaceAction extends UserSiteAction {
   /** The URL where the activity can be accessed. */
   readonly activityUrl: string;
 
@@ -18,9 +18,9 @@ export interface PlannedFaceToFaceAction extends UserSiteAction {
 }
 
 /**
- * Creates an xAPI Statement to represent a user planning a face-to-face meeting.
+ * Creates an xAPI Statement to represent a user completing a face-to-face meeting.
  */
-export default function plannedFaceToFace(action: PlannedFaceToFaceAction): Statement {
+export default function completedFaceToFace(action: CompletedFaceToFaceAction): Statement {
   return {
     timestamp: createTimestamp(action.actionDate),
     actor: createAgent({
@@ -29,7 +29,7 @@ export default function plannedFaceToFace(action: PlannedFaceToFaceAction): Stat
       idProviderUrl: action.userIdProviderUrl,
       email: action.userEmail,
     }),
-    verb: planned,
+    verb: completed,
     object: createActivity({
       type: faceToFace,
       url: action.activityUrl,
