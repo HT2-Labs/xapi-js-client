@@ -61,6 +61,11 @@ export const document = 'http://id.tincanapi.com/activitytype/document';
 export const event = 'http://activitystrea.ms/schema/1.0/event';
 
 /**
+ * Represents a face to face meeting or appointment
+ */
+export const faceToFace = 'https://w3id.org/xapi/acrossx/activities/face-to-face-discussion';
+
+/**
  * Represents a graphical image.
  * https://registry.tincanapi.com/#uri/activityType/65
  */
