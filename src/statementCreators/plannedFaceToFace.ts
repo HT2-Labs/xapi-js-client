@@ -32,7 +32,7 @@ export default function plannedFaceToFace(action: PlannedFaceToFaceAction): Stat
     verb: planned,
     object: createActivity({
       type: faceToFace,
-      url: action.activityUrl,
+      url: action.siteUrl,
       name: action.activityName,
       extensions: action.activityExtensions,
     }),
