@@ -1,9 +1,9 @@
-import { faceToFace, source, site } from '../statementConstants/activityTypes';
+import { faceToFace, site, source } from '../statementConstants/activityTypes';
 import { planned } from '../statementConstants/verbs';
+import { Extensions, Statement } from '../statementUtils/types';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
 import createTimestamp from '../statementUtils/createTimestamp';
-import { Statement, Extensions } from '../statementUtils/types';
 import UserSiteAction from '../actionUtils/UserSiteAction';
 
 export interface PlannedFaceToFaceAction extends UserSiteAction {
