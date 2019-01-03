@@ -1,10 +1,10 @@
+import UserSiteAction from '../actionUtils/UserSiteAction';
 import { faceToFace, site, source } from '../statementConstants/activityTypes';
 import { planned } from '../statementConstants/verbs';
-import { Extensions, Statement } from '../statementUtils/types';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
 import createTimestamp from '../statementUtils/createTimestamp';
-import UserSiteAction from '../actionUtils/UserSiteAction';
+import { Extensions, Statement } from '../statementUtils/types';
 
 export interface PlannedFaceToFaceAction extends UserSiteAction {
   /** The URL where the activity can be accessed. */
