@@ -1,6 +1,6 @@
-import completedFaceToFace from '../statementCreators/completedFaceToFace';
+import canceledFaceToFace from '../statementCreators/canceledFaceToFace';
 
-const statement = completedFaceToFace({
+const statement = canceledFaceToFace({
   actionDate: new Date(),
   activityUrl: 'https://demo.example.org/courses/demo-course',
   siteUrl: 'https://demo.example.org',
