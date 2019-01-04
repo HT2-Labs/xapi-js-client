@@ -15,6 +15,7 @@ export const assigned = createVerb('https://w3id.org/xapi/acrossx/verbs/was-assi
 export const attended = createVerb('http://activitystrea.ms/schema/1.0/attend', 'attended');
 export const bookmarked = createVerb('http://id.tincanapi.com/verb/bookmarked', 'bookmarked');
 export const called = createVerb('http://id.tincanapi.com/verb/called', 'called');
+export const canceled = createVerb('https://w3id.org/xapi/dod-isd/verbs/canceled', 'canceled');
 export const commentedOn = createVerb('http://adlnet.gov/expapi/verbs/commented', 'commented on');
 export const completed = createVerb('http://adlnet.gov/expapi/verbs/completed', 'completed');
 export const created = createVerb('http://activitystrea.ms/schema/1.0/create', 'created');
