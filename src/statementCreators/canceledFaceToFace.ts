@@ -18,7 +18,7 @@ export interface CanceledFaceToFaceAction extends UserSiteAction {
 }
 
 /**
- * Creates an xAPI Statement to represent a user planning a face-to-face meeting.
+ * Creates an xAPI Statement to represent a user canceling a face-to-face meeting.
  */
 export default function canceledFaceToFace(action: CanceledFaceToFaceAction): Statement {
   return {
