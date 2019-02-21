@@ -10,6 +10,7 @@ export const createVerb = (id: string, display: string): Verb => {
 };
 
 export const accessed = createVerb('http://activitystrea.ms/schema/1.0/access', 'accessed');
+export const activated = createVerb('https://w3id.org/xapi/dod-isd/verbs/activated', 'activated');
 export const answered = createVerb('http://adlnet.gov/expapi/verbs/answered', 'answered');
 export const assigned = createVerb('https://w3id.org/xapi/acrossx/verbs/was-assigned', 'assigned');
 export const attended = createVerb('http://activitystrea.ms/schema/1.0/attend', 'attended');
@@ -19,11 +20,13 @@ export const canceled = createVerb('https://w3id.org/xapi/dod-isd/verbs/canceled
 export const commentedOn = createVerb('http://adlnet.gov/expapi/verbs/commented', 'commented on');
 export const completed = createVerb('http://adlnet.gov/expapi/verbs/completed', 'completed');
 export const created = createVerb('http://activitystrea.ms/schema/1.0/create', 'created');
+export const deleted = createVerb('https://w3id.org/xapi/dod-isd/verbs/deleted', 'deleted');
 export const downloaded = createVerb('http://id.tincanapi.com/verb/downloaded', 'downloaded');
 export const earned = createVerb('http://id.tincanapi.com/verb/earned', 'earned');
 export const edited = createVerb('http://adlnet.gov/expapi/verbs/edited', 'edited');
 export const evaluated = createVerb('http://www.tincanapi.co.uk/verbs/evaluated', 'evaluated');
 export const exited = createVerb('http://adlnet.gov/expapi/verbs/exited', 'exited');
+export const filled = createVerb('https://w3id.org/xapi/dod-isd/verbs/filled-out', 'filled');
 export const followed = createVerb('https://w3id.org/xapi/dod-isd/verbs/followed', 'followed');
 export const joined = createVerb('http://activitystrea.ms/schema/1.0/join', 'joined');
 export const launched = createVerb('http://adlnet.gov/expapi/verbs/launched', 'launched');
