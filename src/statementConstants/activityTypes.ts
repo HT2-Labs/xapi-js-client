@@ -1,5 +1,7 @@
 // tslint:disable:max-file-line-count
 
+const customBaseUrl = 'https://learninglocker.net/xapi';
+
 /**
  * Represents objects such as news articles, knowledge base entries, or other similar construct.
  * Such objects generally consist of paragraphs of text.
@@ -87,6 +89,11 @@ export const issue = 'http://activitystrea.ms/schema/1.0/issue';
 export const link = 'http://adlnet.gov/expapi/activities/link';
 
 /**
+ * Represents a record of an event.
+ */
+export const logEntry = `${customBaseUrl}/log-entry`;
+
+/**
  * Information that is communicated by or to or between individual actors or groups of actors.
  */
 export const message = 'https://w3id.org/xapi/acrossx/activities/message';
@@ -119,6 +126,31 @@ export const question = 'http://adlnet.gov/expapi/activities/question';
  * https://registry.tincanapi.com/#uri/activityType/76
  */
 export const review = 'http://activitystrea.ms/schema/1.0/review';
+
+/**
+ * Represents an account given of a particular matter, usually in the form of a document.
+ */
+export const report = `${customBaseUrl}/report`;
+
+/**
+ * Represents the resource being assigned to an actor.
+ */
+export const resourceAssignment = `${customBaseUrl}/resource-assignment`;
+
+/**
+ * Represents a resource structure.
+ */
+export const resourceStructure = `${customBaseUrl}/resource-structure`;
+
+/**
+ * Represents a node in a resource structure.
+ */
+export const resourceStructureNode = `${customBaseUrl}/resource-structure-node`;
+
+/**
+ * Represents a feature to enable admins to manage access on a per-user or per-group basis.
+ */
+export const securityRole = 'http://id.tincanapi.com/activitytype/security-role';
 
 /**
  * Represents a site. Usually provided in the grouping context activities.
@@ -172,3 +204,8 @@ export const tutorSession = 'http://id.tincanapi.com/activitytype/tutor-session'
  * A recording of both the visual and audible components made available on a display screen.
  */
 export const video = 'https://w3id.org/xapi/video/activity-type/video';
+
+/**
+ * This represents a sequence of processes.
+ */
+export const workflow = `${customBaseUrl}/workflow`;
