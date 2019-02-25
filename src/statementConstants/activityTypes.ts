@@ -41,6 +41,11 @@ export const book = 'http://id.tincanapi.com/activitytype/book';
 export const comment = 'http://activitystrea.ms/schema/1.0/comment';
 
 /**
+ * Represents an individual or group that may be contacted for information.
+ */
+export const contact = `${customBaseUrl}/contact`;
+
+/**
  * A course represents an entire “content package” worth of material.
  * The largest level of granularity. Unless flat, a course consists of multiple modules
  */
@@ -131,6 +136,11 @@ export const review = 'http://activitystrea.ms/schema/1.0/review';
  * Represents an account given of a particular matter, usually in the form of a document.
  */
 export const report = `${customBaseUrl}/report`;
+
+/**
+ * Represents the individual/group that has been assigned to a resource.
+ */
+export const resourceAssignee = `${customBaseUrl}/resource-assignee`;
 
 /**
  * Represents the resource being assigned to an actor.
