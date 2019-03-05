@@ -216,6 +216,11 @@ export const tutorSession = 'http://id.tincanapi.com/activitytype/tutor-session'
 export const video = 'https://w3id.org/xapi/video/activity-type/video';
 
 /**
+ * A seminar conducted over the Internet which may be live or recorded.
+ */
+export const webinar = 'http://id.tincanapi.com/activitytype/webinar';
+
+/**
  * This represents a sequence of processes.
  */
 export const workflow = `${customBaseUrl}/workflow`;
