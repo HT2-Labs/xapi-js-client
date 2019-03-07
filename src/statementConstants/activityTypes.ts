@@ -35,6 +35,11 @@ export const blog = 'http://id.tincanapi.com/activitytype/blog';
 export const book = 'http://id.tincanapi.com/activitytype/book';
 
 /**
+ * A list of tasks to be completed, names to be consulted, conditions to be verified and similar.
+ */
+export const checklist = 'http://id.tincanapi.com/activitytype/checklist';
+
+/**
  * Represents a textual response to another object.
  * https://registry.tincanapi.com/#uri/activityType/59
  */
@@ -104,6 +109,11 @@ export const logEntry = `${customBaseUrl}/log-entry`;
 export const message = 'https://w3id.org/xapi/acrossx/activities/message';
 
 /**
+ * Refers to an object that was annotated as part of the activity.
+ */
+export const note = 'https://w3id.org/xapi/acrossx/activities/note';
+
+/**
  * Represents an organization of any kind.
  * https://registry.tincanapi.com/#uri/activityType/70
  */
@@ -136,6 +146,11 @@ export const review = 'http://activitystrea.ms/schema/1.0/review';
  * Represents an account given of a particular matter, usually in the form of a document.
  */
 export const report = `${customBaseUrl}/report`;
+
+/**
+ * A generic item. It could be a video, a text article, a device, etc.
+ */
+export const resource = 'http://id.tincanapi.com/activitytype/resource';
 
 /**
  * Represents the individual/group that has been assigned to a resource.
