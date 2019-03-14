@@ -25,7 +25,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "base-64": "^0.1.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@ht2-labs/semantic-release": "1.1.27",
