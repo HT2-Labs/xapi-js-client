@@ -10,6 +10,7 @@ export const cityExtension = `${baseUrl}/city`;
 export const stateExtension = `${baseUrl}/state`;
 export const assignmentDateExtension = `${baseUrl}/assignment-date`;
 export const registrationDateExtension = `${baseUrl}/registration-date`;
+export const plannedDurationBreakdown = `${baseUrl}/planned-duration`;
 
 export const plannedStartTime = 'http://id.tincanapi.com/extension/planned-start-time';
 export const plannedEndTime = 'http://id.tincanapi.com/extension/planned-end-time';
