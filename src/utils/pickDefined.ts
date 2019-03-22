@@ -1,7 +1,7 @@
-import { pickBy } from 'lodash';
+import { isUndefined, pickBy } from 'lodash';
 
 export function pickDefined<V extends object>(obj: V) {
   return pickBy(obj, function (value) {
-    return value !== undefined;
+    return !isUndefined(value);
   });
 }
