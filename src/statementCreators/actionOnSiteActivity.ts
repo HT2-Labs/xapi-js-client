@@ -4,10 +4,18 @@ import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
 import createTimestamp from '../statementUtils/createTimestamp';
 import { Statement, Verb } from '../statementUtils/types';
+import { pickDefined } from '../utils/pickDefined';
+import { pickFilled } from '../utils/pickFilled';
 
 export interface SiteActivityAction extends UserSiteActivityAction {
   /** The xAPI verb that describes the activity. */
   readonly verb: Verb;
+
+  /** Determines if the activity was completed. */
+  readonly completed?: boolean;
+
+  /** Determines if the activity was passed or failed. */
+  readonly passed?: boolean;
 }
 
 /**
@@ -28,6 +36,12 @@ export default function actionOnSiteActivity(action: SiteActivityAction): Statem
       url: action.activityUrl,
       name: action.activityName,
       extensions: action.activityExtensions,
+    }),
+    ...pickFilled({
+      result: pickDefined({
+        completion: action.completed,
+        success: action.passed,
+      }),
     }),
     context: {
       platform: action.platformName,
