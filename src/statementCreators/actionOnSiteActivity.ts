@@ -20,6 +20,12 @@ export interface SiteActivityAction extends UserSiteActivityAction {
 
   /** Determines how long the activity took. */
   readonly duration?: Duration;
+
+  /** Score achieved in the activity as a percentage (decimal between -1 and 1). */
+  readonly scaledScore?: number;
+
+  /** Raw score achieved in the activity. */
+  readonly rawScore?: number;
 }
 
 /**
@@ -48,6 +54,12 @@ export default function actionOnSiteActivity(action: SiteActivityAction): Statem
         duration: action.duration === undefined ? undefined : (
           action.duration.toISOString()
         ),
+        ...pickFilled({
+          score: pickDefined({
+            scaled: action.scaledScore,
+            raw: action.rawScore,
+          }),
+        }),
       }),
     }),
     context: {
