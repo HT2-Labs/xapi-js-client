@@ -1,3 +1,4 @@
+import { Moment } from 'moment';
 import UserSiteActivityAction from '../actionUtils/UserSiteActivityAction';
 import { site, source } from '../statementConstants/activityTypes';
 import createActivity from '../statementUtils/createActivity';
@@ -16,6 +17,9 @@ export interface SiteActivityAction extends UserSiteActivityAction {
 
   /** Determines if the activity was passed or failed. */
   readonly passed?: boolean;
+
+  /** Determines how long the activity took as an ISO Duration. */
+  readonly duration?: Moment.Duration;
 }
 
 /**
@@ -41,6 +45,7 @@ export default function actionOnSiteActivity(action: SiteActivityAction): Statem
       result: pickDefined({
         completion: action.completed,
         success: action.passed,
+        duration: action.duration,
       }),
     }),
     context: {
