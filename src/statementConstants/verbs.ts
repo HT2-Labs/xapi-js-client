@@ -12,7 +12,10 @@ export const createVerb = (id: string, display: string): Verb => {
 export const accessed = createVerb('http://activitystrea.ms/schema/1.0/access', 'accessed');
 export const activated = createVerb('https://w3id.org/xapi/dod-isd/verbs/activated', 'activated');
 export const answered = createVerb('http://adlnet.gov/expapi/verbs/answered', 'answered');
-export const assigned = createVerb('https://w3id.org/xapi/acrossx/verbs/was-assigned', 'assigned');
+export const assigned = createVerb(
+  'https://w3id.org/xapi/acrossx/verbs/was-assigned',
+  'was assigned to',
+);
 export const attempted = createVerb('http://adlnet.gov/expapi/verbs/attempted', 'attempted');
 export const attended = createVerb('http://activitystrea.ms/schema/1.0/attend', 'attended');
 export const bookmarked = createVerb('http://id.tincanapi.com/verb/bookmarked', 'bookmarked');
