@@ -62,7 +62,7 @@ export interface Activity {
      * Use string constants expored from `statementConstants/activityTypes`.
      * https://github.com/adlnet/xAPI-Spec/blob/master/xAPI-Data.md#43-iris
      */
-    readonly type: IRI;
+    readonly type?: IRI;
 
     /**
      * Human readable representation of the activity in one or more languages.
