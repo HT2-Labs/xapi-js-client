@@ -21,6 +21,10 @@ export const attended = createVerb('http://activitystrea.ms/schema/1.0/attend', 
 export const bookmarked = createVerb('http://id.tincanapi.com/verb/bookmarked', 'bookmarked');
 export const called = createVerb('http://id.tincanapi.com/verb/called', 'called');
 export const canceled = createVerb('https://w3id.org/xapi/dod-isd/verbs/canceled', 'canceled');
+export const closedSale = createVerb(
+  'http://id.tincanapi.com/verb/closed-sale',
+  'closed a sale with',
+);
 export const commentedOn = createVerb('http://adlnet.gov/expapi/verbs/commented', 'commented on');
 export const completed = createVerb('http://adlnet.gov/expapi/verbs/completed', 'completed');
 export const created = createVerb('http://activitystrea.ms/schema/1.0/create', 'created');

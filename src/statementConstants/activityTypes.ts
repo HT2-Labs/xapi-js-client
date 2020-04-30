@@ -173,6 +173,11 @@ export const resourceStructure = `${customBaseUrl}/resource-structure`;
 export const resourceStructureNode = `${customBaseUrl}/resource-structure-node`;
 
 /**
+ * Represents a sales opportunity.
+ */
+export const salesOpportunity = 'http://id.tincanapi.com/activitytype/sales-opportunity';
+
+/**
  * Represents a feature to enable admins to manage access on a per-user or per-group basis.
  */
 export const securityRole = 'http://id.tincanapi.com/activitytype/security-role';
