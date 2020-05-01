@@ -36,6 +36,10 @@ export const evaluated = createVerb('http://www.tincanapi.co.uk/verbs/evaluated'
 export const exited = createVerb('http://adlnet.gov/expapi/verbs/exited', 'exited');
 export const filled = createVerb('https://w3id.org/xapi/dod-isd/verbs/filled-out', 'filled');
 export const followed = createVerb('https://w3id.org/xapi/dod-isd/verbs/followed', 'followed');
+export const generated = createVerb(
+  'https://w3id.org/xapi/dod-isd/verbs/generated',
+  'generated a lead with',
+);
 export const joined = createVerb('http://activitystrea.ms/schema/1.0/join', 'joined');
 export const launched = createVerb('http://adlnet.gov/expapi/verbs/launched', 'launched');
 export const liked = createVerb('https://w3id.org/xapi/acrossx/verbs/liked', 'liked');

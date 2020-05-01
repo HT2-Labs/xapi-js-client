@@ -90,6 +90,11 @@ export const image = 'http://activitystrea.ms/schema/1.0/image';
 export const issue = 'http://activitystrea.ms/schema/1.0/issue';
 
 /**
+ * Represents a person or business who may eventually become a client
+ */
+export const salesLead = `${customBaseUrl}/sales-lead`;
+
+/**
  * Means of expressing a link to another resource within, or external to, an activity.
  * Not synonymous with launching another resource.
  * Should be considered external to the current resource.
