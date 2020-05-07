@@ -1,5 +1,5 @@
 import UserSiteAction from '../actionUtils/UserSiteAction';
-import { salesOpportunity, site, source } from '../statementConstants/activityTypes';
+import { organization, salesOpportunity, site, source } from '../statementConstants/activityTypes';
 import { closedSale } from '../statementConstants/verbs';
 import createActivity from '../statementUtils/createActivity';
 import createAgent from '../statementUtils/createAgent';
@@ -22,17 +22,11 @@ export interface CompletedSaleAction extends UserSiteAction {
   /** The reason for which a sale or opportunity is closed, usually when lost */
   readonly closedReason?: string;
 
-  /** The name of the account linked to the sale or opportunity. */
+  /** The URL or identifier of the account that owns the sale or opportunity. */
+  readonly accountUrl: string;
+
+  /** The name of the account that owns the sale or opportunity. */
   readonly accountDisplayName?: string;
-
-  /** The unique identifier for the account. */
-  readonly accountId?: string;
-
-  /** The URL of the identity provider (e.g. https://ht2labs.com). Use siteUrl as fallback. */
-  readonly accountProviderUrl?: string;
-
-  /** An email address for the account (e.g. user@example.org). */
-  readonly accountEmail?: string;
 }
 
 /**
@@ -65,11 +59,10 @@ export default function completedSale(action: CompletedSaleAction): Statement {
             url: action.siteUrl,
             name: action.siteName,
           }),
-          createAgent({
-            displayName: action.accountDisplayName,
-            id: action.accountId,
-            idProviderUrl: action.accountProviderUrl,
-            email: action.accountEmail,
+          createActivity({
+            type: organization,
+            url: action.accountUrl,
+            name: action.accountDisplayName,
           }),
         ],
         category: [createActivity({

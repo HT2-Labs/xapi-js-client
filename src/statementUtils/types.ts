@@ -147,7 +147,7 @@ export interface Context {
      * Activity with an indirect relation to the Activity which is the Object of the Statement.
      * Usually contains the site as an activity amongst other things.
      */
-    readonly grouping?: (Activity | Agent)[];
+    readonly grouping?: Activity[];
 
     /**
      * Activity that doesn't fit one of the other properties.

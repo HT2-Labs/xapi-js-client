@@ -14,8 +14,7 @@ const statement = completedSale({
   isWon: true,
   closedReason: 'Too expensive',
   accountDisplayName: 'Example Account',
-  accountId: '456',
-  accountProviderUrl: 'https://demo.example.org',
+  accountUrl: 'https://demo.example.org',
 });
 
 export default statement;
