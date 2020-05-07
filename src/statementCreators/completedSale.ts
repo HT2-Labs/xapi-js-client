@@ -22,10 +22,10 @@ export interface CompletedSaleAction extends UserSiteAction {
   /** The reason for which a sale or opportunity is closed, usually when lost */
   readonly closedReason?: string;
 
-  /** The URL or identifier of the account that owns the sale or opportunity. */
+  /** The URL or identifier of the account or organization linked to the sale or opportunity. */
   readonly accountUrl: string;
 
-  /** The name of the account that owns the sale or opportunity. */
+  /** The name of the account or organization linked to the sale or opportunity. */
   readonly accountDisplayName?: string;
 }
 
@@ -59,6 +59,8 @@ export default function completedSale(action: CompletedSaleAction): Statement {
             url: action.siteUrl,
             name: action.siteName,
           }),
+        ],
+        parent: [
           createActivity({
             type: organization,
             url: action.accountUrl,
