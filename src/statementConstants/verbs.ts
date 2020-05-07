@@ -21,6 +21,10 @@ export const attended = createVerb('http://activitystrea.ms/schema/1.0/attend', 
 export const bookmarked = createVerb('http://id.tincanapi.com/verb/bookmarked', 'bookmarked');
 export const called = createVerb('http://id.tincanapi.com/verb/called', 'called');
 export const canceled = createVerb('https://w3id.org/xapi/dod-isd/verbs/canceled', 'canceled');
+export const closedSale = createVerb(
+  'http://id.tincanapi.com/verb/closed-sale',
+  'closed a sale with',
+);
 export const commentedOn = createVerb('http://adlnet.gov/expapi/verbs/commented', 'commented on');
 export const completed = createVerb('http://adlnet.gov/expapi/verbs/completed', 'completed');
 export const created = createVerb('http://activitystrea.ms/schema/1.0/create', 'created');
@@ -32,6 +36,10 @@ export const evaluated = createVerb('http://www.tincanapi.co.uk/verbs/evaluated'
 export const exited = createVerb('http://adlnet.gov/expapi/verbs/exited', 'exited');
 export const filled = createVerb('https://w3id.org/xapi/dod-isd/verbs/filled-out', 'filled');
 export const followed = createVerb('https://w3id.org/xapi/dod-isd/verbs/followed', 'followed');
+export const generated = createVerb(
+  'https://w3id.org/xapi/dod-isd/verbs/generated',
+  'generated a lead with',
+);
 export const joined = createVerb('http://activitystrea.ms/schema/1.0/join', 'joined');
 export const launched = createVerb('http://adlnet.gov/expapi/verbs/launched', 'launched');
 export const liked = createVerb('https://w3id.org/xapi/acrossx/verbs/liked', 'liked');
