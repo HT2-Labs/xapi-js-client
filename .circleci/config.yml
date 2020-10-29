@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 machine:
   services:
     - docker
@@ -7,6 +7,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:8@sha256:ff2c2a3fd5105396697de4c20139435fe9f47d62716fa241d225122deb711d50
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     environment:
       - NPM_CONFIG_LOGLEVEL: warn
     working_directory: ~/repo
@@ -28,3 +31,10 @@ jobs:
       - deploy:
           name: Release Code
           command: npm run release
+
+workflows:
+  build:
+    jobs:
+      - build:
+          context:
+            - docker-hub-creds
